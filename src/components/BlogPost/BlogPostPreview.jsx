@@ -9,7 +9,7 @@ const BlogPostPreview = ({ id, title, preview, author, date }) => {
 
         const navigate = useNavigate();
     return (
-        <div className={styles.post}>
+        <div className={styles.preview}>
             <h2 className={styles.title}>{title}</h2>
             <p>{preview}</p>
             <p className={styles.info}>{author} • {date}</p>  

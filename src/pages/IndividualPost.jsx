@@ -7,6 +7,8 @@ import CommentList from '../components/Comments/CommentList';
 import CommentForm from '../components/Comments/CommentForm';
 import { useState } from 'react';
 import { useAuth } from "../contexts/AuthContext";
+import styles from '../components/BlogPost/BlogPost.module.css';
+
 
 function IndividualPost() {
 const [comments, setComments] = useState([
@@ -79,13 +81,13 @@ const addComment= (newComment)=>{
     <div>
         <Header/>
     
-  
+    <div className={styles.postContainer}>
  
-        <BlogPost id={targetPost.id} title={targetPost.title} content={targetPost.content} author={targetPost.author} date={targetPost.date} image={targetPost.image} imageAlt={targetPost.imageAlt}/>
+        <BlogPost id={targetPost.id} title={targetPost.title} content={targetPost.content} author={targetPost.author} date={targetPost.date} image={targetPost.image} imageAlt={targetPost.imageAlt} />
         <CommentForm addComment={addComment}/>
         <CommentList comments={comments}/>
     
-    
+    </div>
     <Footer/>
 
     </div>

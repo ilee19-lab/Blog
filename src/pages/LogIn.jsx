@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import styles from './Pages.module.css';
 
 function LogIn() {
-const[email, setEmail] = useState("");
+const[username, setUsername] = useState("");
 const[password, setPassword] = useState("");
 const navigate = useNavigate();
 
@@ -18,14 +18,14 @@ const navigate = useNavigate();
 
  const handleSubmit = (e) => {
   e.preventDefault();
-  if(!email || !password){
+  if(!username || !password){
     alert("Please fill in both fields.")
     return;
 
   }
   setIsLoggedIn(true)
   setAuthUser({
-    name: email,
+    username: username,
   });
   
 
@@ -40,8 +40,8 @@ const navigate = useNavigate();
     <Header></Header>
     <h2>Log In</h2>
     <form className={styles.loginForm} onSubmit={handleSubmit}>
-      <label htmlFor="email">Username/Email</label>
-      <input type='text' value={email} onChange={(e)=> setEmail(e.target.value)}></input>
+      <label>Username</label>
+      <input type='text' value={username} onChange={(e)=> setUsername(e.target.value)}></input>
       <label  htmlFor="password">Password</label>
       <input type='password' value={password} onChange={(e)=> setPassword(e.target.value)}></input>
       <button className={styles.loginScreenbtn}type='submit'>Log In</button>

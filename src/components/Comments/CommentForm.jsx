@@ -3,16 +3,15 @@ import styles from './Comments.module.css';
 import { useAuth } from '../../contexts/AuthContext';
 
 function CommentForm({addComment}){
-    const[name, setName] = useState('');
     const[message, setMessage] = useState('');
-    const { isLoggedIn } = useAuth();
+    const { isLoggedIn, authUser} = useAuth();
     
 
     const handleSubmit = (event) =>{
     event.preventDefault();
 
     const newComment={
-        author: name,
+        author: authUser.username,
         message: message,
         date: new Date().toLocaleDateString()
 
@@ -20,7 +19,6 @@ function CommentForm({addComment}){
 
     addComment(newComment);
 
-    setName('');
     setMessage('');
 
 };
@@ -36,7 +34,7 @@ return(
 
     <form className={styles.form} onSubmit={handleSubmit}>
         <h2>Comments</h2>
-        <input type='text' placeholder="Name" value={name} onChange={(event)=> setName(event.target.value)}></input>
+        <input type='text' placeholder="Name" value={authUser.username} ></input>
         <textarea name="comment" id="comment" rows="5" cols="80" placeholder="Add a comment" value={message} onChange={(event)=> setMessage(event.target.value)}></textarea>
         <input className={styles.submitBtn}type="submit" value="Submit"/>
     </form>
