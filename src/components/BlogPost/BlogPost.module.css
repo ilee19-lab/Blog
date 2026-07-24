@@ -1,0 +1,53 @@
+.post{
+background-color: white;
+box-shadow: rgba(0,0,0,0.5) 0px 2px 8px;
+padding: 3rem;
+margin: 2rem auto;
+width: 80%;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+
+
+}
+
+.title{
+margin-bottom: 1rem;
+}
+.info{
+margin-top: 2rem;
+}
+.share{
+font-size: 25px;
+color:blue;
+align-self: flex-end;
+cursor: pointer;
+
+}
+.share:hover{
+    color: black;
+}
+.shareCaption, button{
+ align-self: flex-end;
+ font-weight: bold;   
+}
+
+.viewMore{
+    width:150px;
+    height:40px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.viewMore:hover{
+
+    background-color: rgb(187, 187, 187);
+}
+
+@media (max-width: 768px) {
+  .fitPicture {
+    width: 100%;
+    height: 220px;
+    aspect-ratio: auto;
+  }
+}

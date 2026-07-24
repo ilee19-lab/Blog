@@ -1,0 +1,39 @@
+.header{
+background-color: rgb(127, 168, 255);
+display:flex;
+justify-content: space-between;
+padding: 2em;
+flex-wrap: wrap;
+
+}
+h1{
+font-size: 3em;
+margin-bottom: 1rem;
+}
+
+.navList{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navListItem a{
+display: flex;
+text-decoration: none;
+font-size: larger;
+color: white;
+
+
+}
+
+a:visited{
+
+    color: white;
+}
+
+.navButton{
+padding: 4px 16px;
+    cursor: pointer;
+}
