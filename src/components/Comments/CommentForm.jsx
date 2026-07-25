@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Comments.module.css';
 import { useAuth } from '../../contexts/AuthContext';
+import { Link } from 'react-router';
 
 function CommentForm({addComment}){
     const[message, setMessage] = useState('');
@@ -25,7 +26,7 @@ function CommentForm({addComment}){
 if(!isLoggedIn){
     return <div>
     <p className={styles.loggedOutMessage}>You must be logged in to leave a comment.</p>
-    <a href="/LogIn"><button className={styles.logInComments} >Log In</button></a>
+    <Link to="/LogIn"><button className={styles.logInComments} >Log In</button></Link>
 </div>
 }
  

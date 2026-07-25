@@ -14,7 +14,7 @@ function ContactPage() {
         <input placeholder="Name" className={styles.formClass}></input>
         <input placeholder="Email"  className={styles.formClass} type='email'></input>
         <textarea placeholder="Message" className={styles.textarea}></textarea>
-        <button className={styles.submit}type='submit'>Submit</button>
+        <button className={styles.submit}>Submit</button>
 
 
 
