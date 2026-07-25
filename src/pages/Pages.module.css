@@ -98,6 +98,12 @@ border-color: white;
     text-decoration: none;
 
 }
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
 
 p{
     margin-top: 1rem;

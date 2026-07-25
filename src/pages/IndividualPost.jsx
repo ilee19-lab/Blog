@@ -85,9 +85,9 @@ const addComment= (newComment)=>{
  
         <BlogPost id={targetPost.id} title={targetPost.title} content={targetPost.content} author={targetPost.author} date={targetPost.date} image={targetPost.image} imageAlt={targetPost.imageAlt} />
         <CommentForm addComment={addComment}/>
-        <CommentList comments={comments}/>
     
     </div>
+    <CommentList comments={comments}/>
     <Footer/>
 
     </div>
